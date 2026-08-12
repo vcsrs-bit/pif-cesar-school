@@ -1,0 +1,5 @@
+main()
+{
+printf("Linguagem C");
+system("pause");
+}

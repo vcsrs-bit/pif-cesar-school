@@ -1,0 +1,22 @@
+// Questão 4 ~
+/* O codigo em questão é:
+#include <stdio.h>
+#include <stdlib.h>;
+int Main{} || Aqui ele fechou a função principal do programa
+( || Aqui ele tentou abrir uma função com ()
+printf( Existem %d semanas no ano.,52); || Aqui ele esqueceu as reticencias e chamou uma variavel que não existe ainda
+cout << endl; || Aqui ele ia contar quantos numeros tem no ano? eu não faço ideias, mas seria count
+system("PAUSE"); || Aqui ele pausou o programa mas o return 0; já iria parar o programa no terminal caso não retornasse algum erro.
+return 0;
+) || Tentou fechar a função principal com ()
+Abaixo eu irei corrigir.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int Semanas = 52;
+	printf("Existem %d semanas no ano.", Semanas);
+	system("PAUSE");
+	return 0;
+}

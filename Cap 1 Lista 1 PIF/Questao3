@@ -1,0 +1,17 @@
+// Questão 3 ~
+/*Esse programa vai falar sobre o uso de comentarios em 
+várias linhas e mostra também o uso de linhas únicas.*/
+/*Primeiro Programa :D*/
+/*Na verdade é o terceiro programa, but anyways...*/
+#include <stdio.h>; /*Para printf*/ 
+#include <stdlib.h>; /*Para system? ._. n sei oq é isso*/
+int main(){
+    /* Inicio do código em sí*/
+    prinf("Primeiro programa! :)"); /* Para "printar" primeiro programa na tela8*/
+    system("pause"); /*Para o programa não fechar sozinho*/
+    return 0; /*Se não der erro, retornar zero erros!*/
+
+} /* Fim do programa . . .  Nesse contexto, pelo menos.*/
+
+
+ 
