@@ -1,0 +1,18 @@
+O primeiro print será assim:
+"
+ Bom  Dia  Shirley."
+o segundo print será assim:
+"Você já tomou café?
+ "
+O terceiro print será assim:
+"
+
+A solução não existe!
+Não Insista."
+o quarto print será assim:
+"Duas  Linhas  De  Saidá
+Ou  uma?"
+o quinto print será assim:
+"um
+dois
+três"
