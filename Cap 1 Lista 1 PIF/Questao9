@@ -1,0 +1,7 @@
+|| Em C, tudo que está no modificador %c é considerado um caractere.
+|| '\n' em vez da letra N, ele irá pular para próxima linha.
+|| '\t' em vez da letra T, ele irá fazer a tabulação.
+|| '\"' vai dizer para imprimir apenas as aspas mas não terminar aqui.
+|| O programa irá imprimir no final: "Primeiro programa
+||                                     Pressione qualquer tecla para continuar. . .
+|| Na penultima linha "printf("%c", "\"");" o compilador ira dar um aviso e ocorrera uma reserva de memoria lixo 
