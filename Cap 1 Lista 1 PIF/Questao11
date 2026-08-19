@@ -1,0 +1,15 @@
+|| \r ||  é uma constante de caractere de escape || char
+|| 2130 || constante inteira decimal || int
+|| -123 || constante inteira deimal || int
+|| 33.28 || constante de ponto flutuante || double
+|| 0XFA || constante hexadecimal inteira || int
+|| 0101 || constante inteira octal || int
+|| 2.0e30 || constante de ponto flutuante em notação cientifica || double
+|| \xDC || caractere de escape em hexadecimal || char
+|| '\"' || constante de caractere de escape || char
+|| '\\' || constante de caractere de escape || char
+|| 'F' || constante de caractere simples || char
+|| 0 || constante de numero inteiro || int
+|| '\0' || constante de caractere nulo (fim de linha) || char
+|| "F" || Cadeia de caracteres || char [] ou char *
+|| -4567.89 || Constante de caractere decimal negativa || double
