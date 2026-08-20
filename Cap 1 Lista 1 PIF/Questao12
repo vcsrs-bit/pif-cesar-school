@@ -1,8 +1,0 @@
-|| a) int a; [ Correto ] [ Declaração correta de uma variavel inteira ]
-|| b) float b; [ Correto ] [ Declaração correta de uma variavel decimal ]
-|| c) double float c; [ Incorreto ] [ Double ou float são exclusivos para uma variavel, não há como declarar os dois em uma unica variavel. ]
-|| d) unsigned char d; [ Correto ] [ Declaração correta de uma variavel reservada sem sinal ]
-|| e) unsigned e; [ Correto ] [ O compilador irá assumir que o e é um int ]
-|| f) long float f; [ Incorreto ] [ O Correto seria long double, o metodo long float já não é mais utilizado em C moderno. ]
-|| g) long g; [ Correto ] [ O compilador assumirá que o g é um numero inteiro long (long int) ]
-|| h) long double h; [ Correto ] [ declaração correta de um numero decimal/ponto flutuante estendido em C. ]
