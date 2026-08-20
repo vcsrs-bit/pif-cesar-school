@@ -1,3 +1,0 @@
-|| b) Verdadeiro (a linguagem C diferencia rigorosamente letras maiúsculas de minúsculas).
-|| Justificativa: A linguagem C é muito sensivel a letras maiusculas e minusculas, alocando diferentes variaveis. 
-|| Se eu fosse fazer Numero, numero, NUMERO o programa entenderia que são três variaveis diferentes que armazenam coisas diferentes.
