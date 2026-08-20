@@ -1,4 +1,0 @@
-|| a) printf ( "Primeiro programa" );
-|| b) printf( "Primeiro programa" );
-|| c) printf("Primeiro programa");
-|| isso mostra que o C não é tão rigido quanto se imagina em relação a espaços, ele ainda consegue ler e compilar os comandos de printf.
