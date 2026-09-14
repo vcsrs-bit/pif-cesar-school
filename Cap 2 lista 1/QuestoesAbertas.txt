@@ -1,68 +1,100 @@
+Atividade de Lógica de Programação - Linguagem C
+
 Questão 1:
 a) Valor exibido no console:
-Ao executar o programa, será exibido o valor 2
-b) Explicação do fenômeno:
-Ocorre o fenômeno da conversão implícita de tipos (ou coerção de tipos/casting implícito) combinada com o truncamento. Como a variável valor_inteiro é
-do tipo int e o valor atribuído a ela é do tipo ponto flutuante (double),
-o compilador descarta automaticamente a parte fracionária (.97) para adequar o dado ao tipo de destino, mantendo apenas a parte inteira (2)
-c) Controle explícito e prevenção:
-Para controlar o comportamento explicitamente:
-   Casting explícito: O programador pode indicar a conversão de forma clara utilizando (int) 2.97.
-    Arredondamento: Se o objetivo for arredondar o valor em vez de truncar, pode-se utilizar a função round() da biblioteca <math.h> antes do casting, como em valor_inteiro = (int) round(2.97);, 
-    obtendo o valor 3.
+   Ao executar o programa, será exibido o valor 2.
 
+b) Explicação do fenômeno:
+   Ocorre o fenômeno da conversão implícita de tipos (também conhecida como coerção de tipos ou casting implícito) combinada com o truncamento. Como a variável "valor_inteiro" é do tipo int e o valor atribuído a ela é um ponto flutuante (double), o compilador descarta automaticamente a parte fracionária (.97) para adequar o dado ao tipo de destino, mantendo apenas a parte inteira (2).
+
+c) Controle explícito e prevenção:
+   Para controlar o comportamento explicitamente, existem duas abordagens:
+   - Casting explícito: O programador pode indicar a conversão de forma clara utilizando (int) 2.97.
+   - Arredondamento: Se o objetivo for arredondar o valor em vez de truncar, pode-se utilizar a função round() da biblioteca <math.h> antes do casting, como em: valor_inteiro = (int) round(2.97); obtendo o valor 3.
 
 
 Questão 2:
 a) Motivo para evitar <conio.h>:
-  A biblioteca <conio.h> é uma biblioteca proprietária criada originalmente para sistemas MS-DOS e compiladores da Borland. 
-  Ela não faz parte do padrão ANSI C/ISO C. O uso de suas funções inviabiliza a compilação
-  do código em sistemas operacionais modernos como Linux e macOS, além de ambientes de produção em nuvem e servidores.
+   A biblioteca <conio.h> é uma biblioteca proprietária criada originalmente para sistemas MS-DOS e compiladores antigos da Borland. Ela não faz parte do padrão ANSI C / ISO C. O uso de suas funções quebra a portabilidade do código, inviabilizando a compilação em sistemas operacionais modernos como Linux e macOS, além de ambientes de produção em nuvem e servidores.
 
 b) Funções equivalentes e portáveis de <stdio.h>:
-  As funções padronizadas para leitura e escrita de caracteres são getchar() e putchar(). Para leituras formatadas no fluxo de entrada padrão, utiliza-se a função scanf().
+   As funções padronizadas para leitura e escrita de caracteres individuais são getchar() e putchar(). Para leituras formatadas no fluxo de entrada padrão, utiliza-se a função scanf().
+
 
 Questão 4:
-
 Valores Iniciais: a = 1, b = 2, c = 3, d = 4
 
 1) a += b + c;
-Resultados parciais: a = 6, b = 2, c = 3, d = 4.
+   Resultados parciais: a = 6, b = 2, c = 3, d = 4.
+
 2) b *= c = d + 2;
-Resultados parciais: a = 6, b = 12, c = 6, d = 4.
+   Resultados parciais: a = 6, b = 12, c = 6, d = 4.
+
 3) d %= a + a + a;
-Resultados parciais: a = 6, b = 12, c = 6, d = 4.
+   Resultados parciais: a = 6, b = 12, c = 6, d = 4.
+
 4) d -= c - b -= a;
-Resultados parciais: a = 6, b = 6, c = 6, d = 4.
+   Resultados parciais: a = 6, b = 6, c = 6, d = 4.
+
 5) a + b += c += 7;
-Resultados Finais:
-a: 6
-b: 19
-c: 13
-d: 4
+   Resultados Finais:
+   a: 6
+   b: 19
+   c: 13
+   d: 4
+
 
 Questão 5:
 Valores considerados: i = 1, j = 2, k = 3, n = 2, x = 3.3, y = 4.4
 
-a) i < j + 3 implica em 1 < (2 + 3) implica em 1 < 5 implica em 1 (Verdadeiro)
-b) 2 * i - 7 <= j - 8 implica em (2*1) - 7 <= 2 - 8 implica em -5 <= -6 implica em 0 (Falso)
-c) -x + y >= 2.0 * y implica em -3.3 + 4.4 >= 2.0 * 4.4 implica em 1.1 >= 8.8 implica em 0 (Falso)
-d) x == y implica em 3.3 == 4.4 implica em 0 (Falso)
-e) !(n - j) implica em !(2 - 2) implica em !(0) implica em 1 (Verdadeiro)
-f) !!n - j implica em !!(2) - 2 implica em !(0) - 2 implica em 1 - 2 implica em -1 (Como é diferente de zero, conta como Verdadeiro)
-g) i && j && k implica em 1 && 2 && 3 implica em todos são diferentes de zero implica em 1 (Verdadeiro)
-h) i || j - 3 && k implica em 1 || ... (Como o primeiro termo já é verdadeiro, o operador || faz um curto-circuito e nem olha o resto) implica em 1 (Verdadeiro)
-i) i < j && 2 >= k implica em (1 < 2) && (2 >= 3) implica em 1 && 0 implica em 0 (Falso)
-j) i == 2 || j == 4 || k == 5 implica em 1 == 2 || 2 == 4 || 3 == 5 implica em 0 || 0 || 0 implica em 0 (Falso)
+a) i < j + 3
+   Expressão: 1 < (2 + 3) -> 1 < 5
+   Resultado: 1 (Verdadeiro)
+
+b) 2 * i - 7 <= j - 8
+   Expressão: (2 * 1) - 7 <= 2 - 8 -> -5 <= -6
+   Resultado: 0 (Falso)
+
+c) -x + y >= 2.0 * y
+   Expressão: -3.3 + 4.4 >= 2.0 * 4.4 -> 1.1 >= 8.8
+   Resultado: 0 (Falso)
+
+d) x == y
+   Expressão: 3.3 == 4.4
+   Resultado: 0 (Falso)
+
+e) !(n - j)
+   Expressão: !(2 - 2) -> !(0)
+   Resultado: 1 (Verdadeiro)
+
+f) !!n - j
+   Expressão: !!(2) - 2 -> 1 - 2 -> -1
+   Resultado: -1 (Em C, qualquer valor diferente de zero comporta-se logicamente como Verdadeiro)
+
+g) i && j && k
+   Expressão: 1 && 2 && 3 (Como todos os termos são diferentes de zero)
+   Resultado: 1 (Verdadeiro)
+
+h) i || j - 3 && k
+   Expressão: 1 || ... (O primeiro termo é verdadeiro, gerando curto-circuito no operador ||)
+   Resultado: 1 (Verdadeiro)
+
+i) i < j && 2 >= k
+   Expressão: (1 < 2) && (2 >= 3) -> 1 && 0
+   Resultado: 0 (Falso)
+
+j) i == 2 || j == 4 || k == 5
+   Expressão: 1 == 2 || 2 == 4 || 3 == 5 -> 0 || 0 || 0
+   Resultado: 0 (Falso)
+
 
 Questão 6:
-
 a) Diferença de fluxo e valores impressos:
-- Operador Prefixado (++n): Incrementa o valor da variável antes de utilizá-lo na expressão. Em "int x = ++n;", o valor de n passa a ser 6 e depois é atribuído a x.
-  Valores impressos no Trecho A: n = 6, x = 6
+   - Operador Prefixado (++n): Incrementa o valor da variável antes de utilizá-lo na expressão. Em "int x = ++n;", o valor de n passa a ser 6 e depois é atribuído a x.
+     Valores impressos no Trecho A: n = 6, x = 6
 
-- Operador Pós-fixado (m++): Utiliza o valor atual da variável na expressão e realiza o incremento apenas depois. Em "int y = m++;", o valor atual 5 é atribuído a y, e em seguida m passa a ser 6.
-  Valores impressos no Trecho B: m = 6, y = 5
+   - Operador Pós-fixado (m++): Utiliza o valor atual da variável na expressão e realiza o incremento apenas depois. Em "int y = m++;", o valor atual 5 é atribuído a y, e em seguida m passa a ser 6.
+     Valores impressos no Trecho B: m = 6, y = 5
 
 b) Comportamento Indefinido no printf:
-A instrução "printf("%d\t%d\t%d\n", n, n + 1, n++);" gera Comportamento Indefinido (Undefined Behavior). O padrão da linguagem C não garante a ordem de avaliação dos argumentos passados para uma função. Modificar uma variável (n++) e ler seu valor (n, n + 1) na mesma instrução, sem um ponto de sequenciação (sequence point) intermediário, faz com que o resultado dependa inteiramente do compilador e das otimizações de código, gerando saídas inconsistentes.
+   A instrução "printf("%d\t%d\t%d\n", n, n + 1, n++);" gera Comportamento Indefinido (Undefined Behavior). O padrão da linguagem C não garante a ordem de avaliação dos argumentos passados para uma função. Modificar uma variável (n++) e ler seu valor (n, n + 1) na mesma instrução, sem um ponto de sequenciação (sequence point) intermediário, faz com que o resultado dependa inteiramente do compilador e das diretivas de otimização, gerando saídas inconsistentes e imprevisíveis.
