@@ -1,0 +1,22 @@
+Questão 1:
+a) Valor exibido no console:
+Ao executar o programa, será exibido o valor 2
+b) Explicação do fenômeno:
+Ocorre o fenômeno da conversão implícita de tipos (ou coerção de tipos/casting implícito) combinada com o truncamento. Como a variável valor_inteiro é
+do tipo int e o valor atribuído a ela é do tipo ponto flutuante (double),
+o compilador descarta automaticamente a parte fracionária (.97) para adequar o dado ao tipo de destino, mantendo apenas a parte inteira (2)
+c) Controle explícito e prevenção:
+Para controlar o comportamento explicitamente:
+   Casting explícito: O programador pode indicar a conversão de forma clara utilizando (int) 2.97.
+    Arredondamento: Se o objetivo for arredondar o valor em vez de truncar, pode-se utilizar a função round() da biblioteca <math.h> antes do casting, como em valor_inteiro = (int) round(2.97);, obtendo o valor 3.
+
+
+
+Questão 2:
+a) Motivo para evitar <conio.h>:
+A biblioteca <conio.h> é uma biblioteca proprietária criada originalmente para sistemas MS-DOS e compiladores da Borland. Ela não faz parte do padrão ANSI C/ISO C. O uso de suas funções inviabiliza a compilação
+do código em sistemas operacionais modernos como Linux e macOS, além de ambientes de produção em nuvem e servidores.
+
+b) Funções equivalentes e portáveis de <stdio.h>:
+As funções padronizadas para leitura e escrita de caracteres são getchar() e putchar(). Para leituras formatadas no fluxo de entrada padrão, utiliza-se a função scanf().
+
